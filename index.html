@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TKOS - Future-Forward Communication Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Updated CSS for TKOS - Modern & Attractive */
+
+        /* === Vibrant Blue & Electric Purple Palette === */
+        :root {
+            --primary-color: #3498db; /* Vibrant Blue */
+            --secondary-color: #8e44ad; /* Electric Purple */
+            --accent-color: #f39c12; /* Bright Orange (for highlights) */
+            --text-color: #2c3e50; /* Dark Blue Gray */
+            --text-light: #7f8c8d; /* Light Gray */
+            --bg-light: #ecf0f1; /* Very Light Gray */
+            --bg-white: #ffffff;
+            --white-color: #ffffff;
+            --border-radius: 12px;
+            --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            --transition-speed: 0.4s;
+
+            /* Hover Colors */
+            --primary-hover: #2980b9; /* Darker Blue */
+            --secondary-hover: #7a399b; /* Darker Purple */
+        }
+        /* ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            padding: 20px 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo a {
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--secondary-color);
+        }
+
+        nav {
+            font-size: 1.1rem;
+        }
+
+        nav a {
+            margin-left: 30px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-speed) ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section - Modern Design with Image */
+        .hero {
+            background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.9), rgba(var(--secondary-color-rgb), 0.9)), url('https://via.placeholder.com/1920x1080/3498db/8e44ad?Text=Modern+Telecom');
+            background-size: cover;
+            background-position: center;
+            color: var(--white-color);
+            text-align: center;
+            padding: 150px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        :root {
+            --primary-color-rgb: 52, 152, 219;
+            --secondary-color-rgb: 142, 68, 173;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            animation: slideInRight 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 50px;
+            opacity: 0.8;
+            font-weight: 400;
+            animation: fadeInUp 1s ease-out 0.5s;
+            animation-fill-mode: backwards;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white-color);
+            padding: 18px 40px;
+            border: none;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            box-shadow: 0 6px 15px rgba(243, 156, 18, 0.4);
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(243, 156, 18, 0.5);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 120px 30px;
+            background-color: var(--bg-white);
+        }
+
+        .services-section h2 {
+            text-align: center;
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 70px;
+            color: var(--secondary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 45px 30px;
+            text-align: center;
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card i {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        /* Call to Action Section */
+        .cta-section {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            padding: 100px 30px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-section .btn {
+            background-color: var(--accent-color);
+            box-shadow: 0 6px 15px rgba(243, 156, 18, 0.5);
+        }
+
+        .cta-section .btn:hover {
+            background-color: #e67e22;
+            box-shadow: 0 8px 20px rgba(243, 156, 18, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--white-color);
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity var(--transition-speed) ease;
+        }
+
+        footer a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 3rem; }
+            .hero p { font-size: 1.2rem; }
+            .services-section h2, .cta-section h2 { font-size: 2.8rem; }
+            .services-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+            .service-card { padding: 35px 25px; }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 15px 0; }
+            .header-content { flex-direction: column; align-items: center; }
+            .logo { margin-bottom: 15px; }
+            nav a { margin: 0 15px; }
+            .hero { padding: 120px 30px; text-align: center; }
+            .hero-content { max-width: 100%; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .services-section, .cta-section { padding: 80px 30px; }
+            .services-section h2, .cta-section h2 { font-size: 2.4rem; }
+            .services-grid { grid-template-columns: 1fr; gap: 30px; }
+            .service-card { padding: 30px; }
+            nav { font-size: 1rem; }
+            nav a { margin: 10px 0; }
+        }
+
+        @media (max-width: 576px) {
+            body { font-size: 16px; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .btn { padding: 15px 30px; font-size: 1rem; }
+            .services-section h2, .cta-section h2 { font-size: 2rem; }
+            footer p { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="https://www.tkos.co.za/">TKOS</a>
+            </div>
+            <nav>
+                <a href="https://www.tkos.co.za/" class="active">Home</a>
+                <a href="https://www.tkos.co.za/wholesale-voip/">Solutions</a>
+                <a href="https://www.tkos.co.za/blog/">Blogs</a>
+                <a href="https://www.tkos.co.za/contact/">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Empowering Your Business with Seamless Communication</h1>
+            <p>Discover innovative and reliable telecom solutions designed to drive efficiency and growth.</p>
+            <a href="https://www.tkos.co.za/" class="btn">Explore Our Solutions</a>
+        </div>
+    </section>
+
+    <section class="services-section" id="solutions-section">
+        <div class="container">
+            <h2>Our Comprehensive Solutions</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-voicemail"></i>
+                    <h3>Advanced VoIP Services</h3>
+                    <p>Experience crystal-clear voice quality and flexible communication with our state-of-the-art VoIP solutions.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Cloud Contact Center</h3>
+                    <p>Enhance customer interactions and agent productivity with our scalable and feature-rich cloud contact center platform.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Bulk SMS Messaging</h3>
+                    <p>Reach your audience effectively with our reliable and high-volume A2P SMS messaging services.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Dedicated Connectivity</h3>
+                    <p>Ensure seamless operations with our secure and high-speed dedicated internet and network solutions.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Analytics & Reporting</h3>
+                    <p>Gain valuable insights into your communication performance with our detailed analytics and reporting tools.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Communication</h3>
+                    <p>Protect your sensitive data with our robust security measures and encrypted communication channels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Communication Strategy?</h2>
+            <p>Partner with TKOS and unlock the full potential of modern telecom technologies for your business success.</p>
+            <a href="https://www.tkos.co.za/" class="btn">Get a Free Consultation</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TKOS | All Rights Reserved</p>
+            <p>
+                <a href="https://www.tkos.co.za/privacy-and-policy/">Privacy Policy</a> |
+                <a href="https://www.tkos.co.za/terms-and-conditions/">Terms and Conditions</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
