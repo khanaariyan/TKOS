@@ -1,0 +1,25 @@
+{
+  "name": "tkos-project",
+  "version": "1.0.0",
+  "description": "TKOS communication solution project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "tkos",
+    "communication",
+    "voip",
+    "api"
+  ],
+  "author": "ariyan Khan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
