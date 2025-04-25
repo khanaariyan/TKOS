@@ -1,0 +1,35 @@
+{
+    "name": "tkos/project",
+    "description": "TKOS communication solution project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "TKOS",
+            "email": "info@techopensystems.co.za"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "guzzlehttp/guzzle": "^7.3",
+        "monolog/monolog": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "TKOS\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "echo 'Installation complete!'"
+        ],
+        "post-update-cmd": [
+            "echo 'Update complete!'"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
